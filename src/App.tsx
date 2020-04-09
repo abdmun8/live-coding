@@ -3,7 +3,7 @@ import _ from 'underscore'
 import './App.css';
 
 // color data
-const colorDatas = [
+const colorDatas:{ category: string, color: string, colorDarker: string }[] = [
   { category: 'Red', color: '#ff0000', colorDarker: '#dd0000' },
   { category: 'Red', color: '#ff0011', colorDarker: '#dd0011' },
   { category: 'Red', color: '#ff0022', colorDarker: '#dd0022' },
@@ -87,6 +87,7 @@ function App() {
       </div>
       {/* box */}
       <div className="box-container">
+        {/* loop through data */}
         {colorDatas.filter(item => {
           if (filterSelect === 'all') {
             return true
